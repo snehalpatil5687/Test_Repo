@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "836d122e-0ff7-40df-ad01-1aa5a29f0e4d",
+		"name": "Data Driven POST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Reg User",
+					"id": "83e7f32a-fb7a-4ea0-8b85-91ba08ddd031",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"job\": \"{{job}}\"\r\n}"
+						},
+						"url": "https://reqres.in/api/users"
+					},
+					"response": []
+				}
+			],
+			"id": "4b0e339b-b364-42c6-bb67-9cff1d793fab"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2838cda0-893b-422a-a5d8-b03ef4edf9af",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fbe40b77-5076-4aa1-906d-e923cdc2eabf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "name",
+			"value": "test1"
+		},
+		{
+			"key": "job",
+			"value": "test1"
+		},
+		{
+			"key": "username",
+			"value": "snehalpatil5687",
+			"type": "string"
+		},
+		{
+			"key": "personal access token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
