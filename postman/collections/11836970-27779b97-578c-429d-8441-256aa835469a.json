@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "11836970-27779b97-578c-429d-8441-256aa835469a",
+		"name": "Automation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Disease",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "82e579aa-11ca-49b7-9f7a-1c7c4e358a62",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.request.headers.add({\r",
+							"    key: 'Authorization',\r",
+							"    value: 'Bearer ' + pm.environment.get('accessToken')\r",
+							"});\r",
+							"// Generate a random string\r",
+							"let randomString = '';\r",
+							"for (let i = 0; i < 5; i++) {\r",
+							"  randomString += pm.variables.replaceIn('{{$randomAlphaNumeric}}');\r",
+							"}\r",
+							"\r",
+							"// Set the random string as a code in the request body\r",
+							"pm.request.body.update({\r",
+							"  mode: 'raw',\r",
+							"  raw: JSON.stringify({\r",
+							"    code: 'disease1'+randomString\r",
+							"  })\r",
+							"});\r",
+							"//print the request body\r",
+							"console.log(pm.request.body.raw);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c37889f-0d75-4ac6-82b6-132aac04b2fb",
+						"exec": [
+							"pm.test(\"Response status code is 201\", function () {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "11836970-f2667c47-8b7e-4ff8-a2c7-f8a7b9a7acf9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refType\": \"disease\",\r\n  \"path\": \"\",\r\n  \"code\": \"disease1\",\r\n  \"label\": \"disease1\",\r\n  \"status\": \"DRAFT\",\r\n  \"active\": true,\r\n  \"refdataSetName\": \"PierianHemeOntology\",\r\n  \"attributes\": {\r\n    \"preferredName\": \"disease1\",\r\n    \"synonyms\": [\r\n      \"disease1\"\r\n    ],\r\n    \"SNOMEDCTPreferredName\": \"disease1\",\r\n    \"SNOMEDCTInternationId\": \"disease1\",\r\n    \"display\": \"Yes\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}reference-data",
+					"host": [
+						"{{url}}reference-data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2cb30391-7ad6-4a20-99fb-144415979d13",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "50aa273c-5cdc-43d8-9fa4-e7271dd393bd",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://kan36balh1-vpce-08a7e57d9980f80be.execute-api.us-east-1.amazonaws.com/devqa/",
+			"type": "string"
+		},
+		{
+			"key": "auth_url",
+			"value": "https://identity-dev.uat.pieriandx.com/identity/resources/auth/v1/api-token",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "snehalpatil5687",
+			"type": "string"
+		},
+		{
+			"key": "personal access token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
