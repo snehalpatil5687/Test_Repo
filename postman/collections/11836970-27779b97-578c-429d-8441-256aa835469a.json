@@ -71,9 +71,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}reference-data",
+					"raw": "{{url}}reference-data/test",
 					"host": [
 						"{{url}}reference-data"
+					],
+					"path": [
+						"test"
 					]
 				}
 			},
