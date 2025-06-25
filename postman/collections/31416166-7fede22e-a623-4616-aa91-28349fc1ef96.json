@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "31416166-7fede22e-a623-4616-aa91-28349fc1ef96",
 		"name": "Swift1",
-		"description": "Swift OpenAPI Specification Document\n\nContact Support:\n Email: apiteam@swagger.io",
+		"description": "Swift OpenAPI Specification Document\n\nContact Support:  \nEmail: [apiteam@swagger.io](https://mailto:apiteam@swagger.io)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
