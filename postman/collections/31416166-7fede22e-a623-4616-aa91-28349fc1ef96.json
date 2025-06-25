@@ -13,6 +13,189 @@
 					"name": "drug",
 					"item": [
 						{
+							"name": "setVersion",
+							"item": [
+								{
+									"name": "Get last published version",
+									"id": "31416166-4c02c621-bfa7-4187-970a-38b2ba193ae2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug",
+												"setVersion"
+											]
+										},
+										"description": "Gets last published version"
+									},
+									"response": [
+										{
+											"id": "31416166-e1520dfc-1269-44ae-ac06-374380fbbf86",
+											"name": "successful operation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  }\n]"
+										},
+										{
+											"id": "31416166-01c5ba04-72d0-422a-a88b-b67142f785a5",
+											"name": "Bad request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "31416166-94747f69-dc5c-4fea-91d4-3aeb30145e6f",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "31416166-b0b6009b-788a-4ae4-bb83-7a2b7a021bf5",
+											"name": "Something went wrong",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "31416166-cf993131-1969-4e88-92bb-0419b7a85596"
+						},
+						{
 							"name": "publish",
 							"item": [
 								{
@@ -1865,9 +2048,7 @@
 							"\r",
 							"// Set the access token as an environment variable for use in other requests\r",
 							"pm.environment.set(\"accessKey\", accessToken);\r",
-							"// Extracts access token and saves it as an environment variable\r",
-							"  var jsonData = pm.response.json();\r",
-							"pm.environment.set(\"accessKey\", jsonData.accessToken);"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
