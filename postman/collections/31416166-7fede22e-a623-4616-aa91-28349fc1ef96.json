@@ -1865,7 +1865,9 @@
 							"\r",
 							"// Set the access token as an environment variable for use in other requests\r",
 							"pm.environment.set(\"accessKey\", accessToken);\r",
-							""
+							"// Extracts access token and saves it as an environment variable\r",
+							"  var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"accessKey\", jsonData.accessToken);"
 						],
 						"type": "text/javascript",
 						"packages": {}
