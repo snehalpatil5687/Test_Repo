@@ -1,0 +1,2583 @@
+{
+	"info": {
+		"_postman_id": "11836970-1ffaeea9-cee4-4d21-b1bc-ff53581285a9",
+		"name": "Swift1",
+		"description": "Swift OpenAPI Specification Document\n\nContact Support:\n Email: apiteam@swagger.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "reference-data",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "update a sepecific refData",
+							"id": "11836970-c3ec0bc8-fc02-4376-8696-4f26e8d25e69",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{acc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"uniqueId\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "2f2876ad-8404-4234-8c12-143163a1f1fe",
+											"key": "id",
+											"value": "",
+											"description": "(Required) ID"
+										}
+									]
+								},
+								"description": "update a refData"
+							},
+							"response": [
+								{
+									"id": "11836970-2dcd102e-c8b3-4091-8531-a20f90eccb70",
+									"name": "Updated the refData record successfully",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"uniqueId\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"_id\": \"<string>\",\n  \"path\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"status\": \"<string>\",\n  \"refDataSetVersion\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"createdBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"modifiedBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"uniqueId\": \"<string>\",\n  \"__v\": \"<number>\"\n}"
+								},
+								{
+									"id": "11836970-63974cce-a095-458f-a082-e5c89b3b689e",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"uniqueId\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-220e0e3b-f7ee-4b2c-9a11-b8385fc85e52",
+									"name": "URL not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"uniqueId\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-4119dde3-a5ea-4c2d-9e44-fe064552ec4d",
+									"name": "refData already exists.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"uniqueId\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete a sepecific refData",
+							"id": "11836970-1abb6750-f20f-4033-ba7f-2b8d10fed5a7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "cb49d4e1-f3ed-4b47-81d7-3a2d12dc641f",
+											"key": "id",
+											"value": "",
+											"description": "(Required) ID"
+										}
+									]
+								},
+								"description": "Delete a specified refData record"
+							},
+							"response": [
+								{
+									"id": "11836970-97b0b673-d38a-4870-b3db-27af14bcafad",
+									"name": "Deleted the refData record successfully",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"_id\": \"<string>\",\n  \"path\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"status\": \"<string>\",\n  \"refDataSetVersion\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"createdBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"modifiedBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"uniqueId\": \"<string>\",\n  \"__v\": \"<number>\"\n}"
+								},
+								{
+									"id": "11836970-b0a5f1e9-925c-4a8a-95d4-8b05f31852cf",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-ba2fa516-2828-49e3-8230-8a95fc6e35ab",
+									"name": "refData ID not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-64d79f30-1e55-4e08-a35e-5a5b6c9f7e2a",
+									"name": "refData already deleted.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "11836970-5871e053-75d1-44c0-a05c-b4d5dc3e1f67"
+				},
+				{
+					"name": "drug",
+					"item": [
+						{
+							"name": "setVersion",
+							"item": [
+								{
+									"name": "Get last published version",
+									"id": "11836970-13a45f3c-faad-4755-93fc-0f9b4cbd31cb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug",
+												"setVersion"
+											]
+										},
+										"description": "Gets last published version"
+									},
+									"response": [
+										{
+											"id": "11836970-b0c1749f-3a6e-4dcd-b4d1-813ce2084935",
+											"name": "successful operation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  }\n]"
+										},
+										{
+											"id": "11836970-eb6a861d-9589-4db1-94f3-ab3686823430",
+											"name": "Bad request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "11836970-403d21ed-bd00-4c5e-b7f9-354c5467c31b",
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "11836970-d24c0ad1-1730-45ba-a2cd-8a8bc723d3be",
+											"name": "Something went wrong",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/setVersion",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"setVersion"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "11836970-6759607a-ded2-4939-bb7e-37ff746fdef9"
+						},
+						{
+							"name": "publish",
+							"item": [
+								{
+									"name": "To publish the drugs",
+									"id": "11836970-3886ed1f-a64f-42de-90f1-e09dbe9dce04",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug/publish?name=&version=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug",
+												"publish"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "",
+													"description": "(Required) publish Drug"
+												},
+												{
+													"key": "version",
+													"value": "",
+													"description": "(Required) version"
+												}
+											]
+										},
+										"description": "publishes the drugs and updates the drug version"
+									},
+									"response": [
+										{
+											"id": "11836970-3ef6c593-4fad-4760-b9a7-10796c9698fe",
+											"name": "Drugs published",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/publish?name=&version=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"publish"
+													],
+													"query": [
+														{
+															"description": "(Required) publish Drug",
+															"key": "name",
+															"value": ""
+														},
+														{
+															"description": "(Required) version",
+															"key": "version",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"active\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"name\": \"<string>\",\n  \"version\": \"<string>\",\n  \"createdBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"modifiedBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"_id\": \"<string>\",\n  \"__v\": \"<string>\"\n}"
+										},
+										{
+											"id": "11836970-2b075dc4-b604-42a5-bc93-c6357d0cd341",
+											"name": "URL not found",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/publish?name=&version=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"publish"
+													],
+													"query": [
+														{
+															"description": "(Required) publish Drug",
+															"key": "name",
+															"value": ""
+														},
+														{
+															"description": "(Required) version",
+															"key": "version",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "11836970-35150fd0-d769-4b87-86a9-3ebcb9242ffe",
+											"name": "Specify version type to publish",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/reference-data/drug/publish?name=&version=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"reference-data",
+														"drug",
+														"publish"
+													],
+													"query": [
+														{
+															"description": "(Required) publish Drug",
+															"key": "name",
+															"value": ""
+														},
+														{
+															"description": "(Required) version",
+															"key": "version",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "11836970-20b04d70-c6fc-43d0-971b-cd92d5b3f7c5"
+						},
+						{
+							"name": "Get all the drugs",
+							"id": "11836970-2b7ab3e8-7a57-414c-935a-9c7c8ffe7d0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/drug?filterby=&sort=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										"drug"
+									],
+									"query": [
+										{
+											"key": "filterby",
+											"value": "",
+											"description": "Filter the drugs by 'flatview'"
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"description": "sort the drugs by 'label:asc', 'label:dsc'"
+										}
+									]
+								},
+								"description": "Gets List of all drugs"
+							},
+							"response": [
+								{
+									"id": "11836970-14226b0c-3fa2-4c64-9344-33990fa0fa28",
+									"name": "Drugs retrieved successfully",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug?filterby=&sort=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug"
+											],
+											"query": [
+												{
+													"description": "Filter the drugs by 'flatview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "sort the drugs by 'label:asc', 'label:dsc'",
+													"key": "sort",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  {\n    \"_id\": \"<string>\",\n    \"path\": \"<string>\",\n    \"refType\": \"<string>\",\n    \"code\": \"<string>\",\n    \"label\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"status\": \"<string>\",\n    \"refDataSetVersion\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"createdBy\": {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"date\": \"<string>\"\n    },\n    \"modifiedBy\": {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"date\": \"<string>\"\n    },\n    \"attributes\": {\n      \"drug\": \"<string>\",\n      \"aliases\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"grpClass\": \"<string>\",\n      \"brands\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mechAction\": \"<string>\",\n      \"targetedDrug\": \"<string>\"\n    },\n    \"uniqueId\": \"<string>\",\n    \"__v\": \"<number>\"\n  },\n  {\n    \"_id\": \"<string>\",\n    \"path\": \"<string>\",\n    \"refType\": \"<string>\",\n    \"code\": \"<string>\",\n    \"label\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"status\": \"<string>\",\n    \"refDataSetVersion\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"createdBy\": {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"date\": \"<string>\"\n    },\n    \"modifiedBy\": {\n      \"userId\": \"<string>\",\n      \"userName\": \"<string>\",\n      \"date\": \"<string>\"\n    },\n    \"attributes\": {\n      \"drug\": \"<string>\",\n      \"aliases\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"grpClass\": \"<string>\",\n      \"brands\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mechAction\": \"<string>\",\n      \"targetedDrug\": \"<string>\"\n    },\n    \"uniqueId\": \"<string>\",\n    \"__v\": \"<number>\"\n  }\n]"
+								},
+								{
+									"id": "11836970-5f1a53fc-e206-491e-91b4-243e34a42a41",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug?filterby=&sort=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug"
+											],
+											"query": [
+												{
+													"description": "Filter the drugs by 'flatview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "sort the drugs by 'label:asc', 'label:dsc'",
+													"key": "sort",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-1c21c2af-ebf7-4c36-bb17-1a7347114b98",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug?filterby=&sort=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug"
+											],
+											"query": [
+												{
+													"description": "Filter the drugs by 'flatview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "sort the drugs by 'label:asc', 'label:dsc'",
+													"key": "sort",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-6fed4705-cafc-4f73-84af-5941b4933860",
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/drug?filterby=&sort=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"drug"
+											],
+											"query": [
+												{
+													"description": "Filter the drugs by 'flatview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "sort the drugs by 'label:asc', 'label:dsc'",
+													"key": "sort",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "11836970-ef906d20-55e1-4086-9e4d-e80263556d66"
+				},
+				{
+					"name": "disease",
+					"item": [
+						{
+							"name": "setVersion",
+							"item": [],
+							"id": "11836970-9e7771c5-3357-47ac-a160-f2908827d9a7"
+						},
+						{
+							"name": "publish",
+							"item": [],
+							"id": "11836970-c6a5f2f8-aa19-4395-a762-232b5af5f9b2"
+						},
+						{
+							"name": "Add a new refData",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f1d1bba0-95f9-4ef3-9231-41ef4203e41b",
+										"exec": [
+											"//generate random string of length 5\r",
+											"function generateRandomString(length) {\r",
+											"    var result = '';\r",
+											"    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';\r",
+											"    var charactersLength = characters.length;\r",
+											"    for (var i = 0; i < length; i++) {\r",
+											"        result += characters.charAt(Math.floor(Math.random() * charactersLength));\r",
+											"    }\r",
+											"    return result;\r",
+											"}\r",
+											"\r",
+											"//update <randomString> in the request body for label and code field with above random string\r",
+											"var randomString = generateRandomString(5);\r",
+											"pm.request.body.raw = pm.request.body.raw.replace(/<randomString>/g, randomString);\r",
+											"//log request body\r",
+											"console.log(pm.request.body.raw);\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "b9b6a335-0ce1-415a-b5d2-43546121502d",
+										"exec": [
+											"\r",
+											"    const jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"firstId\", jsonData._id);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "11836970-357129e1-c87b-4529-bcb6-5b31a6641e7f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"refType\": \"disease\",\n  \"path\": \"\",\n  \"code\": \"414825006_<randomString>\",\n  \"label\": \"Automation disease <randomString>\",\n  \"status\": \"DRAFT\",\n  \"active\": true,\n  \"refdataSetName\": \"PierianHemeOntology\",\n  \"attributes\": {\n    \"preferredName\": \"disease1\",\n    \"synonyms\": [\n      \"disease1\"\n    ],\n    \"SNOMEDCTPreferredName\": \"disease1\",\n    \"SNOMEDCTInternationId\": \"disease1\",\n    \"display\": \"Yes\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reference-data",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data"
+									]
+								},
+								"description": "adds refData"
+							},
+							"response": [
+								{
+									"id": "11836970-c166751c-0927-4f46-991d-4445aed0728e",
+									"name": "New refData added successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"_id\": \"<string>\",\n  \"path\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"status\": \"<string>\",\n  \"refDataSetVersion\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"createdBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"modifiedBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"uniqueId\": \"<string>\",\n  \"__v\": \"<number>\"\n}"
+								},
+								{
+									"id": "11836970-4c809524-147f-4b95-bf74-d40b4bd57b71",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-d2dd20f8-5c7a-4fa3-a545-bfb70d7f4326",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-b08e7f07-5dba-4e3b-b535-23aa982b095e",
+									"name": "URL not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-174f1f64-1395-45e9-ba78-0588c9c51dbd",
+									"name": "refData with the same name already exists.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"active\": \"<boolean>\",\n  \"attributes\": {\n    \"drug\": \"<string>\",\n    \"aliases\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"grpClass\": \"<string>\",\n    \"brands\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"mechAction\": \"<string>\",\n    \"targetedDrug\": \"<string>\"\n  },\n  \"code\": \"<string>\",\n  \"label\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "To publish the diseases (for HEME send name in query parameter as PierianHemeOntology)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "24f519cd-0d6a-4080-86c9-f276d5fe39c0",
+										"exec": [
+											"//add test for active=true\r",
+											"pm.test('Active status is true', function () {\r",
+											"    pm.response.to.have.jsonBody('active', true);\r",
+											"});\r",
+											"//add test for releaseNote\r",
+											"pm.test('Release note is correct', function () {\r",
+											"    pm.response.to.have.jsonBody('releaseNote', pm.environment.get('releaseNote'));\r",
+											"});\r",
+											"\r",
+											"//add test for name to match with request parameter 'name'\r",
+											"pm.test('Name matches request parameter', function () {\r",
+											"    const requestName = pm.request.url.query.get('name');\r",
+											"    pm.response.to.have.jsonBody('name', requestName);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "334fd6fb-7de6-44a3-b714-1d90ecb7b7fc",
+										"exec": [
+											"// Save release note from request body to an environment variable\r",
+											"const requestBody = JSON.parse(pm.request.body.raw);\r",
+											"pm.environment.set(\"releaseNote\", requestBody.releaseNote);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "11836970-79b3e53d-8975-4eb2-b6bc-d7a1f9671bc9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"releaseNote\": \"Publish disease automation\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/disease/publish?version=MINOR&name={{refdataSetName}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										"disease",
+										"publish"
+									],
+									"query": [
+										{
+											"key": "version",
+											"value": "MINOR",
+											"description": "(Required) version"
+										},
+										{
+											"key": "name",
+											"value": "{{refdataSetName}}",
+											"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data"
+										}
+									]
+								},
+								"description": "publishes the diseases and updates the disease version"
+							},
+							"response": [
+								{
+									"id": "11836970-15530bae-0cfd-402d-9d1c-976460117975",
+									"name": "Diseases published",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/publish?version=&name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"publish"
+											],
+											"query": [
+												{
+													"description": "(Required) version",
+													"key": "version",
+													"value": ""
+												},
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"active\": \"<string>\",\n  \"refType\": \"<string>\",\n  \"name\": \"<string>\",\n  \"version\": \"<string>\",\n  \"createdBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"modifiedBy\": {\n    \"userId\": \"<string>\",\n    \"userName\": \"<string>\",\n    \"date\": \"<string>\"\n  },\n  \"_id\": \"<string>\",\n  \"__v\": \"<string>\"\n}"
+								},
+								{
+									"id": "11836970-6c28e966-7fbd-4a12-84d1-f0d731024565",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/publish?version=&name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"publish"
+											],
+											"query": [
+												{
+													"description": "(Required) version",
+													"key": "version",
+													"value": ""
+												},
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-72c8672d-17ab-479b-90e0-d4f9206a53b1",
+									"name": "URL not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/publish?version=&name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"publish"
+											],
+											"query": [
+												{
+													"description": "(Required) version",
+													"key": "version",
+													"value": ""
+												},
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-04693e33-0d41-4855-94d2-158c5426d062",
+									"name": "Specify version type to publish",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"releaseNote\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/publish?version=&name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"publish"
+											],
+											"query": [
+												{
+													"description": "(Required) version",
+													"key": "version",
+													"value": ""
+												},
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get last published version of Disease (for HEME send name in query parameter as PierianHemeOntology)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4638a28a-52a5-4f08-b0c2-a86bec22be87",
+										"exec": [
+											"const response = pm.response.json();\r",
+											"\r",
+											"   // \"version\": \"7.10.0\", \"version\": \"7.9.0\", add test to check if versions are in descending order\r",
+											"   //convert version from  \"version\": \"7.10.0\", to 7100 and store\r",
+											"pm.test(\"Check if versions are in descending order\", function () {\r",
+											"    const versions = response.map(item => parseInt(item.version.replace(/\\./g, '')));\r",
+											"    console.log(versions);\r",
+											"    const sortedVersions = [...versions].sort((a, b) => b - a);\r",
+											"    console.log(sortedVersions);\r",
+											"    pm.expect(versions).to.deep.equal(sortedVersions);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"    // Validate response against schema\r",
+											"    const Ajv = require(\"ajv\");\r",
+											"    const ajv = new Ajv();\r",
+											"    const schema = {\r",
+											"        \"type\": \"array\",\r",
+											"        \"items\": {\r",
+											"            \"type\": \"object\",\r",
+											"            \"properties\": {\r",
+											"                \"_id\": { \"type\": \"string\" },\r",
+											"                \"version\": { \"type\": \"string\" },\r",
+											"                \"releaseNote\": { \"type\": \"string\" },\r",
+											"                \"createdBy\": {\r",
+											"                    \"type\": \"object\",\r",
+											"                    \"properties\": {\r",
+											"                        \"userId\": { \"type\": \"string\" },\r",
+											"                        \"userName\": { \"type\": \"string\" },\r",
+											"                        \"date\": { \"type\": \"string\" }\r",
+											"                    },\r",
+											"                    \"required\": [\"userId\", \"userName\", \"date\"]\r",
+											"                }\r",
+											"            },\r",
+											"            \"required\": [\"_id\", \"version\", \"releaseNote\", \"createdBy\"]\r",
+											"        }\r",
+											"    };\r",
+											"    const validate = ajv.compile(schema);\r",
+											"    const valid = validate(response);\r",
+											"    pm.test(\"Response is valid against schema\", function () {\r",
+											"        pm.expect(valid).to.be.true;\r",
+											"    });\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "11836970-c65ef3a0-2fa8-48bc-847f-a2f16183edd3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/disease/setVersion?name=PierianHemeOntology",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										"disease",
+										"setVersion"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "PierianHemeOntology",
+											"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data"
+										}
+									]
+								},
+								"description": "Gets last published version of Disease"
+							},
+							"response": [
+								{
+									"id": "11836970-5db8e053-3dbc-47e1-ae0f-58b15e7179d0",
+									"name": "reference-data-set-version obtained successfully",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/setVersion?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"setVersion"
+											],
+											"query": [
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"version\": \"<string>\"\n  }\n]"
+								},
+								{
+									"id": "11836970-fad0051b-acff-4267-9e47-908269bf757c",
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/setVersion?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"setVersion"
+											],
+											"query": [
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-07e6e4a2-0c83-4188-852b-70979fb8b6e0",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/setVersion?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"setVersion"
+											],
+											"query": [
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-1675e834-7361-47d4-9fa2-444eac31db99",
+									"name": "Something went wrong",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease/setVersion?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease",
+												"setVersion"
+											],
+											"query": [
+												{
+													"description": "This is requied to get the heme ontology versions  or other. If not provided it will return the by default somatic ontology version data",
+													"key": "name",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get all the diseases with Ontology options (for HEME send refdataSetName in query parameter as PierianHemeOntology)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d588ca74-98bc-42a6-b37d-d62f9a10bc74",
+										"exec": [
+											"var template = `\r",
+											"<style type=\"text/css\">\r",
+											"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+											"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+											"    .tftable tr {background-color:#ffffff;}\r",
+											"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+											"    .tftable tr:hover {background-color:#e0ffff;}\r",
+											"</style>\r",
+											"\r",
+											"<table class=\"tftable\" border=\"1\">\r",
+											"    <tr>\r",
+											"        <th>ID</th>\r",
+											"        <th>Path</th>\r",
+											"        <th>Label</th>\r",
+											"        <th>Unique ID</th>\r",
+											"    </tr>\r",
+											"    \r",
+											"    {{#each response}}\r",
+											"        <tr>\r",
+											"            <td>{{_id}}</td>\r",
+											"            <td>{{path}}</td>\r",
+											"            <td>{{label}}</td>\r",
+											"            <td>{{uniqueId}}</td>\r",
+											"        </tr>\r",
+											"    {{/each}}\r",
+											"</table>\r",
+											"`;\r",
+											"\r",
+											"function constructVisualizerPayload() {\r",
+											"    return { response: pm.response.json() }\r",
+											"}\r",
+											"\r",
+											"pm.visualizer.set(template, constructVisualizerPayload());"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a66e2ecb-d24a-407a-ab39-c2277ef89a1d",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "11836970-8ccf5d14-7c6c-43a1-acc0-1bf8262407e9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reference-data/disease?status=DRAFT&refdataSetName={{refdataSetName}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reference-data",
+										"disease"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "DRAFT",
+											"description": "Filter the diseases by their status 'PUBLISHED'"
+										},
+										{
+											"key": "refdataSetName",
+											"value": "{{refdataSetName}}"
+										}
+									]
+								},
+								"description": "To get a specific disease use ID"
+							},
+							"response": [
+								{
+									"id": "11836970-56fda503-765e-4dcc-b4c4-b1dd0b686415",
+									"name": "Response will be either 'treeview' or 'flatview', default is 'flatview'.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease?_id=&filterby=&refdataSetVersion=&status=&refdataSetName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease"
+											],
+											"query": [
+												{
+													"description": "ID",
+													"key": "_id",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by 'treeview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by reference-data-set-versions",
+													"key": "refdataSetVersion",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by their status 'PUBLISHED'",
+													"key": "status",
+													"value": ""
+												},
+												{
+													"description": "This is required to get heme ontology data if not provided it will retun the somatic ontology",
+													"key": "refdataSetName",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  {\n    \"id\": \"<string>\",\n    \"path\": \"<string>\",\n    \"label\": \"<string>\",\n    \"children\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/treeView detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/treeView detected>\"\n      }\n    ],\n    \"uniqueId\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"path\": \"<string>\",\n    \"label\": \"<string>\",\n    \"children\": [\n      {\n        \"value\": \"<Circular reference to #/components/schemas/treeView detected>\"\n      },\n      {\n        \"value\": \"<Circular reference to #/components/schemas/treeView detected>\"\n      }\n    ],\n    \"uniqueId\": \"<string>\"\n  }\n]"
+								},
+								{
+									"id": "11836970-f5b120fa-3b6f-4b07-82cb-393fdcd95044",
+									"name": "Invalid query parameter was passed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease?_id=&filterby=&refdataSetVersion=&status=&refdataSetName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease"
+											],
+											"query": [
+												{
+													"description": "ID",
+													"key": "_id",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by 'treeview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by reference-data-set-versions",
+													"key": "refdataSetVersion",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by their status 'PUBLISHED'",
+													"key": "status",
+													"value": ""
+												},
+												{
+													"description": "This is required to get heme ontology data if not provided it will retun the somatic ontology",
+													"key": "refdataSetName",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-35e0f62a-df52-4806-8021-04c33d501d82",
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease?_id=&filterby=&refdataSetVersion=&status=&refdataSetName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease"
+											],
+											"query": [
+												{
+													"description": "ID",
+													"key": "_id",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by 'treeview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by reference-data-set-versions",
+													"key": "refdataSetVersion",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by their status 'PUBLISHED'",
+													"key": "status",
+													"value": ""
+												},
+												{
+													"description": "This is required to get heme ontology data if not provided it will retun the somatic ontology",
+													"key": "refdataSetName",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "11836970-38763a3f-8ccc-4cbf-ab98-c37327f0ec21",
+									"name": "Internal server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reference-data/disease?_id=&filterby=&refdataSetVersion=&status=&refdataSetName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reference-data",
+												"disease"
+											],
+											"query": [
+												{
+													"description": "ID",
+													"key": "_id",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by 'treeview'",
+													"key": "filterby",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by reference-data-set-versions",
+													"key": "refdataSetVersion",
+													"value": ""
+												},
+												{
+													"description": "Filter the diseases by their status 'PUBLISHED'",
+													"key": "status",
+													"value": ""
+												},
+												{
+													"description": "This is required to get heme ontology data if not provided it will retun the somatic ontology",
+													"key": "refdataSetName",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "11836970-17133049-6cd2-42d6-99b3-76f60a36bf3c"
+				}
+			],
+			"id": "11836970-66d45156-0bb6-42e5-a487-960aab781932"
+		},
+		{
+			"name": "Authorization",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9670f29d-09bf-4721-8cd9-19f5c1944125",
+						"exec": [
+							"//pass accessKey from response to other requests\r",
+							"pm.test('Save access token to environment variable', function () {\r",
+							"    pm.environment.set(\"accessToken\", pm.response.json().accessToken);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2d00fa92-67f7-4bb8-987b-9a052a88df2c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "11836970-043e3c7f-b9af-478d-a448-a438f4add8fc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"clientId\": \"193d9be2-4cf4-4ec1-b9bc-47e37d5b56f2\",\r\n    \"secret\": \"b72b7154-65c8-4b59-ac5b-cb95153df6c1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{auth_url}}",
+					"host": [
+						"{{auth_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "910e7464-dcf4-4e8e-aa93-4c1ddba3e728",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7f296aa3-db62-4008-bf30-03c31c18df01",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://kan36balh1-vpce-08a7e57d9980f80be.execute-api.us-east-1.amazonaws.com/devqa/"
+		},
+		{
+			"key": "auth_url",
+			"value": "https://identity-dev.uat.pieriandx.com/identity/resources/auth/v1/api-token",
+			"type": "string"
+		},
+		{
+			"key": "firstId",
+			"value": "<id>",
+			"type": "string"
+		},
+		{
+			"key": "refdataSetName",
+			"value": "<hemeORsolid>",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": "<accessToken>",
+			"type": "string"
+		}
+	]
+}
